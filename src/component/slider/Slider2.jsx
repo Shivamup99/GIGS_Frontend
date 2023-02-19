@@ -4,6 +4,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { projects } from '../../data';
 import ProjectCard from '../projectCard/ProjectCard';
+import { Link } from 'react-router-dom';
 const Slider2 = () => {
     const responsive = {
         superLargeDesktop: {
@@ -25,6 +26,8 @@ const Slider2 = () => {
         }
       };
   return (
+    <>
+     <Link to='/gigs' className='gig-link'>view more giigs {'>>'}</Link>
     <div className='slider'>
         <div className="container">
         <Carousel responsive={responsive} infinite={true}  autoPlay={true}  autoPlaySpeed={3000}>
@@ -36,6 +39,7 @@ const Slider2 = () => {
       </Carousel>;
         </div>
     </div>
+    </>
   )
 }
 
